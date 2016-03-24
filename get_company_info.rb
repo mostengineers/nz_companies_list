@@ -2,6 +2,9 @@ require 'nokogiri'
 require 'open-uri'
 require 'pry'
 
+search_date = '01 02 2016'
+binding.pry
+
 search_url = 'https://www.business.govt.nz/companies/app/ui/pages/companies/search?q=&entityTypes=LTD&entityStatusGroups=REGISTERED&incorpFrom=01%2F03%2F2016&incorpTo=01%2F03%2F2016&addressTypes=ALL&addressKeyword=&start=0&limit=200&sf=&sd=&advancedPanel=true&mode=advanced#results'
 
 company_details_url = 'https://www.business.govt.nz/companies/app/ui/pages/companies/' # + 5897810 to get details page
