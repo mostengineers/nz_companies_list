@@ -13,9 +13,9 @@ company_search_results = Nokogiri::HTML(open(search_url))
 company_search_results.css('.dataList tr').each do |company_data|
   if company_data.css('.link')[0]
     popup_link = company_data.css('.link')[0][:href] 
-    company_id = popup_link.scan(/'([^']*)'/)
+    company_id = popup_link.scan(/'([^']*)'/)[0][0]
     company_details = [
-      company_id,
+      company_details_url + company_id,
       company_data.css('.entityName').text,
       #company_data.css('.entityInfo').text,
       company_data.css('.incorporationDate label').text
